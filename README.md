@@ -20,6 +20,43 @@ parar) e `SEM-TRAVA/` (o gate que tira a hesitação do agente antes do método 
 
 ---
 
+## Descrição completa
+
+**O que é.** Um repositório de método, não de código alheio. Dentro dele estão os dois kits de
+trabalho que transformam o seu agente de IA num engenheiro reverso que termina o serviço: um para
+app que roda na sua máquina, outro para sistema que só tem o cliente na máquina e o cérebro no
+servidor.
+
+**O que ele faz na prática.** Você aponta o app e a pasta. O agente classifica o alvo, copia para
+uma pasta de trabalho (o original fica intocado, com sha256 registrado), instala o arsenal e prova
+vida em cada ferramenta, reconhece a arquitetura, limpa a identidade do original, desempacota o
+código, decompila, cataloga os achados com prova, reconstrói o clone, reempacota e valida a
+paridade medindo tela por tela. Cada fase entrega artefato no disco, não resumo de conversa.
+
+**O que sai no final.** Clone rodando com identidade nova, relatório com números medidos, tabela de
+uso de cada ferramenta instalada e as lacunas declaradas com o que foi tentado. Mais o portão de
+entrega fechado: paridade provada e teste clicando feito.
+
+**O que você precisa ter.** Um agente de IA com execução de shell (Claude Code, Codex, Cursor,
+Hermes, ou chat com ferramenta de código ligada) e o app alvo na sua máquina. O arsenal é
+instalado pela fase 1, com prova de vida de cada ferramenta. Medido em Windows 10 e 11.
+
+**Para quem é.** Quem precisa entender um app por dentro e devolver ele funcionando: estudo,
+migração, auditoria do próprio software, reconstrução do que você mesmo escreveu e perdeu, aula,
+consultoria.
+
+**Para quem não é.** Quem quer sair rodando clone de app de terceiro sem entender nada. O método
+cobra cópia, prova e relatório em cada fase, e o alvo é sempre a sua cópia.
+
+**O que não tem aqui.** Nenhum projeto de terceiro, nenhum binário de app alheio, nenhum alvo.
+Só o método, o gate e o portão.
+
+**Caso real medido.** App Electron de cerca de 200 MB, com o código empacotado, rodando as fases do
+kit 01: o clone abriu por dentro, em modo demonstração, sem tela de login, e a identidade do
+original saiu limpa. O caminho inteiro está nas fases do kit.
+
+---
+
 ## O que tem dentro
 
 | Caminho | O que é | Resultado |
@@ -117,6 +154,20 @@ Saída esperada:
 
 O portão só lê. Nunca escreve, nunca move, nunca apaga. Se um dia der menos de 100%,
 ele diz exatamente qual âncora caiu.
+
+---
+
+## Estado da verificação · 13/10/2026
+
+| Medição | Resultado |
+|---|---|
+| `VALIDAR-KIT.py --todas` rodando dentro do repositório | **100%** nos dois kits |
+| Arquivos versionados | 62, nenhum binário de terceiro |
+| Gate publicado | byte a byte o original, md5 `9c224d43a8c36bb5a046255c2a4be62e` |
+| Caminho de máquina do autor dentro do repositório | nenhum |
+
+O portão só lê. Nunca escreve, nunca move, nunca apaga. Se um dia der menos de 100%, ele diz
+exatamente qual âncora caiu.
 
 ---
 
