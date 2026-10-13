@@ -1,0 +1,15 @@
+# saida de trabalho, nunca sobe
+ER-OUTPUT/
+_BACKUP*/
+_BACKUP-*/
+
+# lixo de ferramenta
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+
+# sistema
+.DS_Store
+Thumbs.db
