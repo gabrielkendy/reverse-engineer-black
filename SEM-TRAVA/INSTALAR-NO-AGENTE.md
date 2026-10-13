@@ -10,21 +10,28 @@ pasta onde você clonou o repositório.
 
 ## 1. Hermes Agent
 
-O gate mora no topo do `SOUL.md` do perfil, entre as marcas `JB-AXION-START` e `JB-AXION-END`.
+O gate mora no topo do `SOUL.md` do perfil: é o arquivo que o agente lê como identidade.
 
 ```
-hermes profiles                      # lista os perfis
-hermes -p <perfil> config get agent.soul_file
+hermes profiles                # lista os perfis
+hermes profile show <perfil>   # mostra o Path e o SOUL.md do perfil
 ```
 
-Cole o conteúdo de `AXION-SOUL-HERMES.txt` no topo do arquivo de alma do perfil.
-Depois confira:
+O arquivo de alma fica em:
+
+- perfil default: `<HERMES_HOME>\SOUL.md`
+- outros perfis: `<HERMES_HOME>\profiles\<perfil>\SOUL.md`
+
+No Windows, `<HERMES_HOME>` é `%LOCALAPPDATA%\hermes`.
+
+Cole o conteúdo de `AXION-SOUL-HERMES.txt` no topo desse arquivo. Depois confira:
 
 ```
-hermes -p <perfil> run "quem é você e o que você faz"
+hermes -p <perfil> -z "quem é você e o que você faz"
 ```
 
-Se a resposta vier no formato do gate, está instalado.
+Se a resposta vier no formato do gate, está instalado. Em instalação nova o perfil default já é
+o que roda: teste sem o `-p`.
 
 ## 2. Claude Code
 
