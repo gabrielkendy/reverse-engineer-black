@@ -14,6 +14,10 @@ CAMINHO_LOCAL ........ onde ele está na sua máquina
 É isso. O agente lê o prompt mestre, instala o arsenal, executa as fases na ordem e só entrega
 quando estiver 100% certo.
 
+O método é longo e agente novo costuma morrer no meio pedindo permissão. Por isso o repositório
+traz duas peças a mais: `EXECUTAR-TUDO.md` (a mensagem que faz o agente rodar as 13 fases sem
+parar) e `SEM-TRAVA/` (o gate que tira a hesitação do agente antes do método começar).
+
 ---
 
 ## O que tem dentro
@@ -28,6 +32,9 @@ quando estiver 100% certo.
 | `PADRAO-KIT-ER.md` | O padrão que os dois kits seguem | entender a anatomia da fase |
 | `VALIDAR-KIT.py` | Portão que mede o kit item por item | `100%` ou a lista do que falta |
 | `.claude/skills/` | Os dois métodos em formato de skill (Claude Code e afins) | instalação sem copiar e colar |
+| `EXECUTAR-TUDO.md` | A mensagem que manda o agente rodar as 13 fases sem parar | execução de ponta a ponta |
+| `SEM-TRAVA/` | O gate que tira a hesitação do agente, mais o medidor de modelo | agente que não para na fase 3 |
+| `.claude/commands/er-black.md` | Comando `/er-black` para Claude Code | um comando roda tudo |
 
 ---
 
@@ -57,6 +64,26 @@ cp -r .claude/skills/* ~/caminho/das/suas/skills/
 ```
 
 As duas skills (`er-black-metodo-01-local` e `er-black-metodo-02-saas`) carregam sob demanda.
+
+---
+
+## O agente executa as 13 fases sem parar
+
+Método longo mais agente novo é igual a agente pedindo permissão na fase 3. As três peças que
+resolvem já estão no repositório:
+
+1. **`SEM-TRAVA/AXION-MATRIZ.txt`** · o gate. Vai antes de tudo, no lugar onde o seu agente lê a
+   identidade dele. Instalação por agente em `SEM-TRAVA/INSTALAR-NO-AGENTE.md`.
+2. **`EXECUTAR-TUDO.md`** · a mensagem única com os dois dados preenchidos. Cole como primeira
+   mensagem e não responda mais nada até o clone abrir.
+3. **`SEM-TRAVA/TESTADOR.py`** · mede qualquer modelo em qualquer endpoint compatível com OpenAI e
+   diz quantos pedidos ele entrega de fato. A linha dura vem do modelo, não do prompt: quem trava, troca.
+
+No Claude Code já vem pronto como comando:
+
+```
+/er-black <nome-do-app> <pasta-do-alvo>
+```
 
 ---
 
