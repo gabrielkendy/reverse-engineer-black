@@ -1,14 +1,14 @@
-# 📦 FASE 1 — CLONAR O CORPO (extrair/rebrand/reempacotar o cliente)
+# 📦 FASE 1 — CLONAR O CORPO (extrair, rebrand e rodar o cliente)
 
 > Reusa o MÉTODO 01 integralmente para o cliente. Aqui resume e foca no rebrand.
 
 ---
 
 ```
-FASE 1 — CLONAR O CORPO (o cliente extraído, rebrandado e reempacotado)
+FASE 1 — CLONAR O CORPO (o cliente extraído, rebrandado e rodando)
 
 O cliente de um SaaS é o CORPO: telas, rotas, chamadas de API, deep links. Você o
-extrai, troca a marca (rebrand) e reempacota. Para a mecânica de descompilar, siga
+extrai, troca a marca (rebrand) e roda. Para a mecânica de descompilar, siga
 o MÉTODO 01 (fases 1–6). Aqui o foco é o que é ESPECÍFICO de SaaS:
 
 ─────────────────────────────────────────────────────────────
@@ -32,7 +32,7 @@ AÇÕES
 4. NÃO REBRANDE AINDA o shape de dados nem as rotas internas — o contrato (Fase 2)
    depende delas ainda intactas.
 
-5. Reempacote (reusa Método 01, Fase 6) e faça smoke test: o app abre e mostra as telas.
+5. Rode o cliente a partir do código e faça smoke test: o app abre e mostra as telas.
 
 ─────────────────────────────────────────────────────────────
 O QUE NÃO FAZER
@@ -49,7 +49,7 @@ ER-OUTPUT\01-corpo.md com:
   - tipo de cliente + linguagem + como extraiu
   - o que foi rebrandado (nome/logo/strings/domínio/deep link)
   - onde ficou a const API_BASE_URL (para a Fase 5)
-  - smoke test do front reempacotado
+  - smoke test do front rodando a partir do código
 ER-OUTPUT\front-clonado\  com o cliente extraído
 
 CRITÉRIOS DE QUALIDADE (só avance quando):

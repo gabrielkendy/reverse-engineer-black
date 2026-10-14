@@ -1,6 +1,6 @@
 # SEM-TRAVA · o gate que faz o agente executar até o fim
 
-O método ER BLACK é longo: 13 fases, dezenas de ferramentas, horas de execução.
+O método ER BLACK é longo: 12 fases, dezenas de ferramentas, horas de execução.
 Agente novo costuma morrer no meio do caminho: pede permissão, avisa que "não pode",
 oferece uma alternativa mais segura, resume em vez de fazer.
 

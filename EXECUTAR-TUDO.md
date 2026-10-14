@@ -1,4 +1,4 @@
-# EXECUTAR TUDO · o prompt que faz o agente rodar as 13 fases sem parar
+# EXECUTAR TUDO · o prompt que faz o agente rodar as 12 fases sem parar
 
 Método longo, agente novo: ele para no meio. Esta é a mensagem que resolve.
 
@@ -60,9 +60,8 @@ App local · `KIT-ER-METODO-01-LOCAL/`
 | 4 | `04-FASE-DECOMPILAR.md` | código-fonte reconstruído |
 | 5 | `05-FASE-ANALISE-AVANCADA.md` | achados catalogados com severidade e prova |
 | 6 | `06-FASE-RECONSTRUIR.md` | clone montado e rodando |
-| 7 | `07-FASE-REEMPACOTAR.md` | pacote final |
-| 8 | `08-FASE-VALIDAR.md` | paridade medida: teste clicando, print, contagem |
-| 9 | `09-CHECKLIST-FINAL.md` | portão de entrega fechado |
+| 7 | `07-FASE-VALIDAR.md` | paridade medida: teste clicando, print, contagem |
+| 8 | `08-CHECKLIST-FINAL.md` | portão de entrega fechado |
 
 SaaS thin-client · `KIT-ER-METODO-02-SAAS/`
 

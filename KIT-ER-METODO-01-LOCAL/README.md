@@ -1,7 +1,7 @@
 # 🧬 KIT ER BLACK — MÉTODO 01 (App 100% Local / Cérebro Local)
 
 > **O que é:** um pacote drop-in de arquivos que instrui QUALQUER IA a fazer Engenharia Reversa
-> completa de um aplicativo local, do `setup` ao reempacotamento 100% funcional.
+> completa de um aplicativo local, do `setup` ao código reconstruído e provado em paridade.
 > O operador só fornece **o nome do app** e **o caminho da pasta local**. O resto a IA faz.
 
 ---
@@ -14,7 +14,7 @@
    - `NOME_DO_APP` — ex.: `WinRAR`, `KeePass`, `StardewValley`
    - `CAMINHO_LOCAL` — ex.: `C:\Alvos\winrar-instalador.exe` ou `C:\Alvos\meu-app\`
 4. **Não faça mais nada.** A IA lê o prompt mestre, segue as fases na ordem, instala as
-   ferramentas, decompila, reconstrói, corrige bugs e entrega o app reempacotado.
+   ferramentas, decompila, reconstrói, corrige bugs e entrega o app rodando a partir do código.
 
 ---
 
@@ -44,9 +44,8 @@
 | `04-FASE-DECOMPILAR.md` | Fase 3 — extrair código-fonte legível | Automática |
 | `05-FASE-ANALISE-AVANCADA.md` | Fase 4 — ofuscação, angr/Triton/Z3, caminhos difíceis | Automática |
 | `06-FASE-RECONSTRUIR.md` | Fase 5 — reescrever 100% com IA | Automática |
-| `07-FASE-REEMPACOTAR.md` | Fase 6 — rebuild + assinatura + empacotar | Automática |
-| `08-FASE-VALIDAR.md` | Fase 7 — paridade 100% (mesma entrada → mesma saída) | Automática |
-| `09-CHECKLIST-FINAL.md` | Checklist de paridade + entrega | Fim |
+| `07-FASE-VALIDAR.md` | Fase 6 — paridade 100% (mesma entrada → mesma saída) | Automática |
+| `08-CHECKLIST-FINAL.md` | Checklist de paridade + entrega | Fim |
 | `FERRAMENTAS-REF.md` | Inventário obrigatório do arsenal (10 categorias) + modelo de justificativa | Consulta + Fase 0 |
 | `scripts/limpar-identidade.py` | Troca nome, autor, URL, copyright, appId, telemetria | Fase 2.5 |
 | `scripts/limpar-logo.py` | Gera e troca ícone/logo; acha nome visível | Fase 2.5 |
@@ -107,7 +106,7 @@ Rode primeiro em `--dry`, leia a amostra, depois grave. Sempre em cópia de trab
 
 Ao fim das fases, você tem:
 - Código-fonte reconstruído (legível, comentado, sem ofuscação)
-- Binário reempacotado funcional (mesmo comportamento do original)
+- App rodando a partir do código reconstruído (mesmo comportamento do original)
 - Clone com identidade inventada, sem resquício do dono original
 - Relatório completo por fase salvo em `ER-OUTPUT\`
 - Checklist de paridade 100% preenchido

@@ -83,7 +83,7 @@ Modelo pequeno precisa de versão mais curta do gate e do prefill certo:
 2. método lido inteiro   (00-PROMPT-MESTRE.md do kit)
 3. alvo apontado         (nome + pasta do app)
 4. execução sem parar    (EXECUTAR-TUDO.md)
-5. portão de entrega     (08-FASE-VALIDAR.md + VALIDAR-KIT.py --todas)
+5. portão de entrega     (07-FASE-VALIDAR.md + VALIDAR-KIT.py --todas)
 ```
 
 ## Um aviso honesto

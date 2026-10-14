@@ -1,7 +1,7 @@
 # 🧬 00 — PROMPT MESTRE ÚNICO (ULTRA)
 
 > Cole este arquivo INTEIRO na IA como PRIMEIRA mensagem. Ele é autossuficiente.
-> A IA instala, executa as 8 fases, testa clicando, limpa o código e só entrega
+> A IA instala, executa as 7 fases, testa clicando, limpa o código e só entrega
 > quando estiver 100% certa. Você só entrega dois dados.
 
 ---
@@ -56,9 +56,8 @@ Execute TODAS as fases em sequência contínua, sem pedir autorização entre el
   FASE 3 · DECOMPILAR      → extrair código-fonte legível (maior esforço)
   FASE 4 · ANÁLISE AVANÇADA→ angr/Triton/Z3/HyperDbg para caminhos difíceis
   FASE 5 · RECONSTRUIR     → reescrever 100%, comportamento exato preservado
-  FASE 6 · REEMPACOTAR     → rebuild + empacotar no formato original
-  FASE 7 · VALIDAR         → paridade + TESTE CLICANDO de verdade
-  FASE 8 · LIMPEZA FINAL + ENTREGA → limpa o código, tira lixo, entrega
+  FASE 6 · VALIDAR         → paridade + TESTE CLICANDO de verdade
+  FASE 7 · LIMPEZA FINAL + ENTREGA → limpa o código, tira lixo, entrega
 
 Se algo exigir decisão: assume o padrão mais conservador, registra no relatório,
 e CONTINUA. Só pare em risco de dano irreversível ao sistema.
@@ -130,7 +129,7 @@ PROIBIDO ENTREGAR CLONE COM IDENTIDADE DO ORIGINAL. Isso é falha crítica, não
 detalhe de acabamento.
 
 ═══════════════════════════════════════════════════════════════
-🧪 TESTE DE VERDADE (FASE 7) — CLICAR, NÃO SUPOR
+🧪 TESTE DE VERDADE (FASE 6) — CLICAR, NÃO SUPOR
 ═══════════════════════════════════════════════════════════════
 Paridade de arquivo não basta. Você VAI ABRIR O CLONE E USAR:
 
@@ -161,7 +160,7 @@ CHECKLIST MÍNIMO DE CLIQUE (adapte ao app, não pule nenhum):
 NÃO DECLARE PARIDADE SEM TER CLICADO. Print do clique + resultado é a prova.
 
 ═══════════════════════════════════════════════════════════════
-🧹 LIMPEZA DE CÓDIGO (FASE 8) — ANTES DE ENTREGAR
+🧹 LIMPEZA DE CÓDIGO (FASE 7) — ANTES DE ENTREGAR
 ═══════════════════════════════════════════════════════════════
 Com o clone já provado funcionando, limpe o código reconstruído:
   - Remove comentário de trabalho, TODO, FIXME, debug print, console.log solto
@@ -189,8 +188,8 @@ quebrou deixou de ser entrega. Limpeza que quebra não vale.
   [ ] Versão preservou a forma (x.y.z); entry point intacto
   [ ] Nenhuma LACUNA sem "tentei X, Y, Z e falhou por [motivo]"
   [ ] Todas as funções reconstruídas com diff + paridade testada
-  [ ] Fase 7: app ABERTO e CLICADO função por função, com print e resultado
-  [ ] Fase 8: código limpo E app retestado depois da limpeza
+  [ ] Fase 6: app ABERTO e CLICADO função por função, com print e resultado
+  [ ] Fase 7: código limpo E app retestado depois da limpeza
   [ ] Nenhum caminho absoluto da minha máquina no que foi entregue
   [ ] Relatório final único escrito em ER-OUTPUT\RELATORIO-FINAL.md
 
@@ -235,12 +234,10 @@ ER-OUTPUT\
   03-decompilar.md
   04-analise-avancada.md
   05-reconstruir.md
-  06-reempacotar.md
-  07-validar.md             (com os prints do teste de clique)
-  08-limpeza-final.md
+  06-validar.md             (com os prints do teste de clique)
+  07-limpeza-final.md
   RELATORIO-FINAL.md        (o único que o operador lê)
   src\                      (código reconstruído e limpo)
-  build\                    (binário reempacotado)
 
 ═══════════════════════════════════════════════════════════════
 TAREFA AGORA
@@ -248,7 +245,7 @@ TAREFA AGORA
 Responda SÓ com esta linha:
 
   "PRONTO. Me passe NOME_DO_APP e CAMINHO_LOCAL. Eu instalo o arsenal, executo
-   as 8 fases sozinho, testo clicando, limpo o código e só entrego quando
+   as 7 fases sozinho, testo clicando, limpo o código e só entrego quando
    estiver 100% certo."
 
 NÃO faça mais nada nesta primeira mensagem. Espere os dois dados.
@@ -268,9 +265,9 @@ EXECUTE AUTOMÁTICO, DO INÍCIO AO FIM, SEM PARAR:
 2. FASE 1 a 8 — execute em sequência, salvando o relatório de cada uma em
    ER-OUTPUT\ antes de passar para a próxima.
 3. Na FASE 2.5, invente um nome novo do zero. Zero identidade do original.
-4. Na FASE 7, ABRA O APP E CLIQUE função por função. Print + resultado de cada.
+4. Na FASE 6, ABRA O APP E CLIQUE função por função. Print + resultado de cada.
    Não declare paridade sem ter clicado.
-5. Na FASE 8, limpe o código e RETESTE. Limpeza que quebra não vale.
+5. Na FASE 7, limpe o código e RETESTE. Limpeza que quebra não vale.
 6. Só entregue com o PORTÃO DE ENTREGA todo verde. Imprima a DECLARAÇÃO DE
    ENTREGA com os números reais.
 7. Se algo exigir decisão: assuma o padrão mais conservador, registre no
@@ -300,9 +297,8 @@ Cole o prompt daquela fase isolada (ela é autossuficiente):
 | 3 | `04-FASE-DECOMPILAR.md` | Código ilegível ou ofuscado |
 | 4 | `05-FASE-ANALISE-AVANCADA.md` | Caminho difícil, checksum, VM |
 | 5 | `06-FASE-RECONSTRUIR.md` | Reconstrução isolada |
-| 6 | `07-FASE-REEMPACOTAR.md` | Rebuild falhou |
-| 7 | `08-FASE-VALIDAR.md` | Paridade/teste de clique |
-| 8 | `09-CHECKLIST-FINAL.md` | Limpeza final e portão de entrega |
+| 6 | `07-FASE-VALIDAR.md` | Paridade/teste de clique |
+| 7 | `08-CHECKLIST-FINAL.md` | Limpeza final e portão de entrega |
 
 ---
 

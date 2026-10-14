@@ -1,13 +1,13 @@
-# ✅ FASE 7 — VALIDAR (paridade 100% + correção de bugs + revisão)
+# ✅ FASE 6 — VALIDAR (paridade 100% + correção de bugs + revisão)
 
-> Cole depois da Fase 6. Prova que o clone é IDÊNTICO em comportamento, não parecido.
+> Cole depois da Fase 5. Prova que o clone é IDÊNTICO em comportamento, não parecido.
 
 ---
 
 ```
-FASE 7 — VALIDAR E PROVAR PARIDADE (a fase que fecha o trabalho)
+FASE 6 — VALIDAR E PROVAR PARIDADE (a fase que fecha o trabalho)
 
-Você é o ENGENHEIRO DE VALIDAÇÃO. O app reempacotado existe. Agora você PROVA que
+Você é o ENGENHEIRO DE VALIDAÇÃO. O app roda a partir do código reconstruído. Agora você PROVA que
 ele se comporta EXATAMENTE como o original: mesma entrada → mesma saída. Depois
 corrige qualquer bug e faz a revisão final de qualidade.
 
@@ -28,7 +28,7 @@ B — CORREÇÃO DE BUG (só depois de achar divergência)
 Para cada DIFF, aplique o protocolo de bug (reproduzir → causa → corrigir → provar):
   - REPRODUZA: rode o caso, confirme a divergência, colete a evidência exata.
   - CAUSA RAIZ em até 5 linhas (não corrija sintoma).
-  - CORRIJA no fonte (Fase 5), recompile (Fase 6), rode de novo.
+  - CORRIJA no fonte (Fase 5) e rode o app de novo a partir do código.
   - PROVE: a saída agora bate. Cole original vs clone lado a lado.
 
 ─────────────────────────────────────────────────────────────
@@ -44,7 +44,7 @@ Revise o fonte final como revisor sênior:
 ─────────────────────────────────────────────────────────────
 ENTREGÁVEL
 ─────────────────────────────────────────────────────────────
-ER-OUTPUT\07-validar.md com:
+ER-OUTPUT\06-validar.md com:
   - tabela de paridade (10+ casos, entrada/saída/lado a lado)
   - bugs encontrados + causa raiz + correção + prova
   - veredito da revisão de código
@@ -57,7 +57,7 @@ CRITÉRIOS DE QUALIDADE (só termine quando):
 - [ ] CLI/headless testado também (não só a GUI) — entrada por stdin/args → saída igual
 - [ ] anti-tamper (se havia) neutralizado e comprovado (não dispara "tamper detected")
 - [ ] revisão de código com veredito
-- [ ] relatório salvo em ER-OUTPUT\07-validar.md
+- [ ] relatório salvo em ER-OUTPUT\06-validar.md
 
 
 ─────────────────────────────────────────────────────────────
@@ -70,15 +70,15 @@ GATE DE SEGURANÇA (roda ANTES de declarar esta fase pronta)
 - [ ] binário só rodou em isolamento (VM/qiling/HyperDbg), nunca no host
 Se um item falhar, corrija e rode de novo. Não escreva "feito" com item aberto.
 
-Confirme: "FASE 7 OK. Paridade [X]%. [N] bugs corrigidos. Veredito: [APROVADO]."
+Confirme: "FASE 6 OK. Paridade [X]%. [N] bugs corrigidos. Veredito: [APROVADO]."
 ```
 
 ---
 
-## 🏁 FECHAMENTO (cole depois da Fase 7)
+## 🏁 FECHAMENTO (cole depois da Fase 6)
 
 ```
-Preencha ER-OUTPUT\08-checklist-final.md com a conferência de TODAS as fases
+Preencha ER-OUTPUT\07-checklist-final.md com a conferência de TODAS as fases
 (uma linha por item, marcando feito/pendente), o resumo executivo do resultado,
 e me entregue:
   - caminho do artefato final

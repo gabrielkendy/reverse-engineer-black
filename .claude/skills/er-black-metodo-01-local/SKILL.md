@@ -1,6 +1,6 @@
 ---
 name: er-black-metodo-01-local
-description: Use ao reconstruir app local por ER (7 fases).
+description: Use ao reconstruir app local por ER (6 fases).
 ---
 
 # ER BLACK · Método 01 — App local (cérebro no binário)
@@ -9,12 +9,12 @@ Quando usar: "faz engenharia reversa desse app", "quero o fonte desse exe", "rec
 
 Fonte canônica (copy-paste pronto, não reescrever):
 `KIT-ER-METODO-01-LOCAL/` — 12 arquivos, **100% no validador**.
-Prompt mestre: `00-PROMPT-MESTRE.md` — **ULTRA, autossuficiente (19,5 KB, 328 linhas)**. Colar INTEIRO como primeira mensagem; a IA responde pedindo `NOME_DO_APP` + `CAMINHO_LOCAL` e daí executa **SOZINHA** as 8 fases sem parar. Blocos internos: FASE 0 arsenal inteiro com prova de vida · FASE 2.5 limpeza de identidade (clone nasce inventado) · FASE 7 TESTE CLICANDO (checklist de 13 cliques, print + resultado) · FASE 8 limpeza de código + RETESTE · PORTÃO DE ENTREGA · DECLARAÇÃO DE ENTREGA com números reais · PINTA VERMELHA · "o que não fazer". Depois vem o comando pronto "EXECUTE AUTOMÁTICO, DO INÍCIO AO FIM, SEM PARAR" (operador troca 2 valores) + tabela de fallback por fase isolada + os 3 scripts. Mestre antigo (9,3 KB) guardado em `_BACKUP-PROMPTS-20261012/` (guardado local, nao sobe).
+Prompt mestre: `00-PROMPT-MESTRE.md` — **ULTRA, autossuficiente (19,5 KB, 328 linhas)**. Colar INTEIRO como primeira mensagem; a IA responde pedindo `NOME_DO_APP` + `CAMINHO_LOCAL` e daí executa **SOZINHA** as 7 fases sem parar. Blocos internos: FASE 0 arsenal inteiro com prova de vida · FASE 2.5 limpeza de identidade (clone nasce inventado) · FASE 6 TESTE CLICANDO (checklist de 13 cliques, print + resultado) · FASE 7 limpeza de código + RETESTE · PORTÃO DE ENTREGA · DECLARAÇÃO DE ENTREGA com números reais · PINTA VERMELHA · "o que não fazer". Depois vem o comando pronto "EXECUTE AUTOMÁTICO, DO INÍCIO AO FIM, SEM PARAR" (operador troca 2 valores) + tabela de fallback por fase isolada + os 3 scripts. Mestre antigo (9,3 KB) guardado em `_BACKUP-PROMPTS-20261012/` (guardado local, nao sobe).
 **LEI DO ARSENAL (ordem do dono, 12/10/2026):** PROIBIDO remover ferramenta · ADICIONAR exige justificativa em 4 campos (FERRAMENTA/MOTIVO/ALVO/SEM ELA) · USO OBRIGATÓRIO de todas com tabela de uso no relatório · PERFORMANCE MÁXIMA em cada uma · ferramenta que falha é CONSERTADA, nunca removida. Arsenal só cresce.
 Padrão das fases: `PADRAO-KIT-ER.md` · Taxonomia A–E: `ER-BLACK-TAXONOMIA.md` · Validador: `VALIDAR-KIT.py`.
 Revalidar depois de mexer: `python3 VALIDAR-KIT.py --todas` → tem que dar 100% nos 2 kits (10 âncoras).
 
-## Pipeline — Fase 0 (setup) + 7 fases, ordem estrita
+## Pipeline — Fase 0 (setup) + 6 fases, ordem estrita
 
 | Fase | Arquivo | Objetivo | Ferramentas-chave | Entregável |
 |---|---|---|---|---|
@@ -25,8 +25,7 @@ Revalidar depois de mexer: `python3 VALIDAR-KIT.py --todas` → tem que dar 100%
 | 3 | `04-FASE-DECOMPILAR.md` | código legível, 100% das funções endereçadas | Ghidra, IDA, jadx, dnSpy/ILSpy, CFR, decompyle3/pycdc | `03-decompilar.md` + `src/` |
 | 4 | `05-FASE-ANALISE-AVANCADA.md` | caminhos difíceis e checksums | angr, Triton, Z3, Miasm, Qiling/Unicorn, HyperDbg | `04-analise-avancada.md` |
 | 5 | `06-FASE-RECONSTRUIR.md` | reescrever 100% mantendo comportamento exato | IA + diff de paridade | `05-reconstruir.md` |
-| 6 | `07-FASE-REEMPACOTAR.md` | rebuild + assinatura + smoke test (30s sem crash; anti-tamper recalculado com o valor da Fase 4; binário sem assinatura = casca) | clang/MinGW/MSVC, electron-builder, apksigner+keystore | `06-reempacotar.md` + `build/` |
-| 7 | `08-FASE-VALIDAR.md` | paridade — mesma entrada → mesma saída (10+ casos; GUI + CLI/headless) | harness de teste | `07-validar.md` + `08-checklist-final.md` |
+| 6 | `07-FASE-VALIDAR.md` | paridade — mesma entrada → mesma saída (10+ casos; GUI + CLI/headless) | harness de teste | `06-validar.md` + `07-checklist-final.md` |
 
 ## Fase 2.5 — LIMPEZA DE IDENTIDADE (automatizada em 12/10/2026)
 
@@ -106,16 +105,16 @@ Extras que economizam horas: **inteligência de alvo primeiro** (versão, CVE, w
 ```
 ER-OUTPUT\
   00-hashes.txt · 01-reconhecimento.md · 02-desempacotar.md · 03-decompilar.md
-  04-analise-avancada.md · 05-reconstruir.md · 06-reempacotar.md · 07-validar.md
-  08-checklist-final.md · 00-ARSENAL.md · src\ · build\
+  04-analise-avancada.md · 05-reconstruir.md · 06-validar.md
+  07-checklist-final.md · 00-ARSENAL.md · src\
 ```
 
 ## Pitfalls (erros que já custaram retrabalho)
 
-- **LEIA ESTA SEÇÃO ANTES DE EMPACOTAR (regra dura, custou 2 pacotes queimados em 12/10/2026).** Os dois erros abaixo já estavam escritos nesta skill e foram repetidos de memória, sem reler. Antes de reempacotar: (1) reler os pitfalls; (2) **caracterizar o asar bom primeiro** — `asar list <bom> | sort > /tmp/bom.txt` + `wc -l` (referência: **970 entradas, ~18,6 MB** neste alvo), `grep -E '\.node$'` para achar os nativos, `find app.asar.unpacked -type f` para contar os desempacotados (2); (3) só então empacotar e comparar contagem entradas-a-entradas com `diff`. **Entrada a menos ou tamanho fora da faixa = pacote ruim, não descobrir com o app quebrado na tela do operador.** Foi exatamente isso que aconteceu: 6,3 MB e o banner vermelho, depois 2 rodadas de bancada.
+- **LEIA ESTA SEÇÃO ANTES DE REMONTAR PACOTE (regra dura, custou 2 pacotes queimados em 12/10/2026).** Os dois erros abaixo já estavam escritos nesta skill e foram repetidos de memória, sem reler. Antes de remontar o pacote (fora das fases do método): (1) reler os pitfalls; (2) **caracterizar o asar bom primeiro** — `asar list <bom> | sort > /tmp/bom.txt` + `wc -l` (referência: **970 entradas, ~18,6 MB** neste alvo), `grep -E '\.node$'` para achar os nativos, `find app.asar.unpacked -type f` para contar os desempacotados (2); (3) só então empacotar e comparar contagem entradas-a-entradas com `diff`. **Entrada a menos ou tamanho fora da faixa = pacote ruim, não descobrir com o app quebrado na tela do operador.** Foi exatamente isso que aconteceu: 6,3 MB e o banner vermelho, depois 2 rodadas de bancada.
 - **Alvo Electron real (executado no Windows, 12/10/2026 — Content Hub 0.2.25, 806/806 arquivos idênticos):** o código do app vive em `resources/app.asar`; `npx @electron/asar extract` devolve tudo legível (aqui: 14.593 linhas, zero ofuscação). Diff por `sha256` arquivo a arquivo é a prova válida — o hash do `app.asar` reconstruído é SEMPRE diferente (empacotamento novo), o conteúdo é que conta.
 - **`unpack` ≠ `unpackDir` (medido no código do @electron/asar, 12/10/2026).** `unpackDir` recebe o **DIRETÓRIO** do arquivo (`path.relative(src, path.dirname(filename))` → `isUnpackedDir`): só marca PASTA inteira. `unpack` recebe o **ARQUIVO** com `minimatch(filename, padrão, {matchBase:true})` → é o certo pra `.node`. Usar `unpack: '*.node'`. Errar aqui quebra o app: `unpackDir: '{**/*.node,node_modules/better-sqlite3/**}'` joga o pacote inteiro pro `.unpacked` (asar cai de 16,5 MB pra 6,6 MB) e o app abre com diálogo de erro JavaScript. Sinal de pacote certo: ~16,5 MB + `.unpacked` com os 2 `.node`.
-- **Não assumir em que pasta vive o nativo:** neste alvo o `safe_fs.node` estava DENTRO do asar e o `better-sqlite3` fora (com stub dentro). Conferir com `asar list` no original antes de reempacotar.
+- **Não assumir em que pasta vive o nativo:** neste alvo o `safe_fs.node` estava DENTRO do asar e o `better-sqlite3` fora (com stub dentro). Conferir com `asar list` no original antes de remontar o pacote.
 - **Shell MSYS + node:** passar caminho `/c/...` pro node quebra; usar `C:/Users/...` ou `cd` antes. E `tasklist | grep` precisa de `MSYS_NO_PATHCONV=1` quando há argumento com barra.
 - Declarar função reconstruída sem diff + teste de paridade → é promessa; o gate reprova.
 - Neutralizar checksum pela metade → o clone se auto-invalida em runtime (o pior caso: parece pronto).
@@ -123,9 +122,9 @@ ER-OUTPUT\
 - Rodar suspeito no host → vira máquina comprometida; isolamento não é opcional.
 - Entregar sem rodar o validador/checklist → 10 âncoras abertas = kit "prompt numa fila".
 
-## Fase 7 na prática — provar que o clone ABRE (Content Hub 0.2.25, 12/10/2026)
+## Fase 6 na prática — provar que o clone ABRE (Content Hub 0.2.25, 12/10/2026)
 
-- **Tela vermelha "Falha ao iniciar" + lista vazia ≠ problema de reempacotamento.** Antes de reempacotar, ler o log: `Error occurred in handler for '...'` aponta o arquivo. Aqui a causa era **dado**, não binário: `content-schema.js` usa `/^---\n.../ ` (só LF) e rejeita CRLF, e `YAML.parse` rejeita valor iniciado por `@` (`handle: @gabrielkendy`). Um arquivo ruim derruba a LISTA INTEIRA porque `listProfiles` usa `.map()` sem try/catch.
+- **Tela vermelha "Falha ao iniciar" + lista vazia ≠ problema de pacote.** Antes de mexer no pacote, ler o log: `Error occurred in handler for '...'` aponta o arquivo. Aqui a causa era **dado**, não binário: `content-schema.js` usa `/^---\n.../ ` (só LF) e rejeita CRLF, e `YAML.parse` rejeita valor iniciado por `@` (`handle: @gabrielkendy`). Um arquivo ruim derruba a LISTA INTEIRA porque `listProfiles` usa `.map()` sem try/catch.
 - **Conserto de classe (no clone):** normalizar quebras (`split(CR+LF).join(LF).split(CR).join(LF)`, `CR`/`LF` via `String.fromCharCode`) e citar valor iniciado por reservado (`[@`]`) antes do `YAML.parse`. Os dois juntos: lista volta, zero erro de handler.
 - **Autoteste por flag (prova sem clique e sem CDP):** acrescentar no `main.js` um bloco sob `--teste-modal` que faz `webContents.executeJavaScript(fs.readFileSync(script))` no `did-finish-load` e imprime `AUTOTESTE-JSON:{...}`. O script testa abrir/fechar cada modal e devolve `{erros, passos, travado}`.
 - **`--remote-debugging-port` FUNCIONA (revalidado 12/10/2026, Content Hub 0.2.25, 3 rodadas limpas).** O pitfall antigo ("recusa conexão") estava errado no geral. Regras medidas: (a) funciona em **processo novo**, com `--remote-allow-origins=http://127.0.0.1:<porta>`; (b) falha sempre que **já existe instância viva** — `requestSingleInstanceLock` mata a nova e a antiga (sem a flag) fica, então a porta nunca abre; matar TODAS antes (`taskkill /F /IM "<app>.exe"`) e conferir `tasklist | grep -ic` = 0; (c) o processo morre quando o `cmd` que o lançou termina → lançar **na mesma execução** do teste (Python `subprocess.Popen` + esperar a porta + medir), nunca depender de processo sobrevivente entre chamadas do terminal. Bônus: `Page.captureScreenshot` por CDP dá o print da tela sem `computer_use` nem PrintWindow.

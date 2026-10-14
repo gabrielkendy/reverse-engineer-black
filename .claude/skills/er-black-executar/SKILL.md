@@ -36,9 +36,8 @@ Ordem dos arquivos numerados, sem pular:
 | 4 | `04-FASE-DECOMPILAR.md` | fonte reconstruído em disco |
 | 5 | `05-FASE-ANALISE-AVANCADA.md` | achados catalogados com severidade e prova |
 | 6 | `06-FASE-RECONSTRUIR.md` | clone montado e abrindo |
-| 7 | `07-FASE-REEMPACOTAR.md` | pacote final gerado |
-| 8 | `08-FASE-VALIDAR.md` | paridade medida, com print e contagem |
-| 9 | `09-CHECKLIST-FINAL.md` | portão de entrega fechado |
+| 7 | `07-FASE-VALIDAR.md` | paridade medida, com print e contagem |
+| 8 | `08-CHECKLIST-FINAL.md` | portão de entrega fechado |
 
 ## Fases · kit 02 (SaaS thin-client)
 

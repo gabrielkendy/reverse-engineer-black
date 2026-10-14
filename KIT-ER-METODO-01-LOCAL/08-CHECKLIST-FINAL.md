@@ -1,6 +1,6 @@
-# ✅ 08 — CHECKLIST FINAL (conferência de todas as fases)
+# ✅ 07 — CHECKLIST FINAL (conferência de todas as fases)
 
-> A IA preenche este arquivo em `ER-OUTPUT\08-checklist-final.md` ao terminar.
+> A IA preenche este arquivo em `ER-OUTPUT\07-checklist-final.md` ao terminar.
 > É o recibo de que o trabalho fechou.
 
 ---
@@ -13,8 +13,7 @@
 - [ ] **FASE 3** — 100% das funções endereçadas, código em `src\`, lacunas registradas
 - [ ] **FASE 4** — todas as lacunas resolvidas (angr/Triton/Z3) com script reproduzível
 - [ ] **FASE 5** — fonte completo compilável, contagem de funções batendo com o original
-- [ ] **FASE 6** — artefato reempacotado, assinado, smoke test passou
-- [ ] **FASE 7** — paridade provada (10+ casos), bugs corrigidos, revisão APROVADO
+- [ ] **FASE 6** — paridade provada (10+ casos), bugs corrigidos, revisão APROVADO
 
 ## RESUMO EXECUTIVO
 
@@ -26,7 +25,7 @@
 | Funções recuperadas | `________` |
 | Paridade atingida | `________%` |
 | Bugs corrigidos | `________` |
-| Artefato final | `build\________` |
+| Código entregue | `src\________` |
 | Disco usado total | `________ GB` |
 
 ## PENDÊNCIAS (se houver)

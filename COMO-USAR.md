@@ -68,8 +68,7 @@ Tudo aparece numa pasta chamada `ER-OUTPUT/`, criada ao lado do trabalho:
 | `04-decompilar.md` | o código lido |
 | `05-analise-avancada.md` | o cérebro do app: funções, canais, o que faz o quê |
 | `06-reconstruir.md` | o que foi remontado |
-| `07-reempacotar.md` | o app montado de volta |
-| `08-validar.md` | a prova: abre, funciona, mesma entrada e mesma saída |
+| `07-validar.md` | a prova: abre, funciona, mesma entrada e mesma saída |
 | relatório final | números reais, tabela de uso das ferramentas e as lacunas |
 
 ## Como saber que terminou bem

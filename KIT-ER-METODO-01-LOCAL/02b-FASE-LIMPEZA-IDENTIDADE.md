@@ -111,7 +111,7 @@ O QUE NÃO FAZER
 ═══════════════════════════════════════════════════════════════
 VERIFICAÇÃO NA TELA (não dá para automatizar)
 ═══════════════════════════════════════════════════════════════
-Depois de reempacotar (Fase 6), abra o app e confira:
+Depois de reconstruir (Fase 5), rode o app a partir do código e confira:
   [ ] Ícone na barra de tarefas
   [ ] Ícone no canto da janela
   [ ] Título da janela

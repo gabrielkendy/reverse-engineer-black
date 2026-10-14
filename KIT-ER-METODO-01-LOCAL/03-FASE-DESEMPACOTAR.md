@@ -52,7 +52,7 @@ ROTAS POR TIPO (siga a que a Fase 1 apontou)
    `app.asar.unpacked\` ao lado com 2 arquivos `.node`. Os nativos ficam DENTRO do
    asar E a pasta existe ao lado. Os dois têm que estar certos.
 
-   ── O ERRO QUE QUEIMA O PACOTE (leia antes de reempacotar) ──
+   ── O ERRO QUE QUEIMA O PACOTE (referência medida, só se você for remontar o pacote) ──
    `unpack` e `unpackDir` NÃO são a mesma coisa:
      · `unpack: '**/*.node'`   → marca o padrão; o asar continua íntegro e grande.
      · `unpackDir: '{**/*.node,**/x}'` → joga ARQUIVO E PASTA inteira pro `.unpacked`.

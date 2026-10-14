@@ -101,11 +101,14 @@
 | **Burp Suite (Community)** | proxy com repetidor e scanner | rejogar requisição alterada sem escrever cliente | abrir o app |
 | **sslsplit / Frida-ssl** | quebra pinning de certificado | app com certificate pinning recusa o mitmproxy | script carrega |
 
-## 8. BUILD / REEMPACOTAR
+## 8. BUILD (referência · fora das fases do método)
+
+> O método entrega o app rodando a partir do código reconstruído. As ferramentas abaixo
+> continuam no arsenal (a lei é não remover nada): use se você quiser gerar um executável.
 
 | Ferramenta | Para que serve | Por que é obrigatória | Verificar com |
 |---|---|---|---|
-| **electron-builder** | reempacota o app Electron | é o caminho de volta: do clone editado para o executável | `npx electron-builder --version` |
+| **electron-builder** | reempacota o app Electron | opcional: só se você quiser gerar um executável a partir do código | `npx electron-builder --version` |
 | **clang / MinGW / MSVC** | compila nativo (C/C++/Rust) | módulo nativo alterado precisa ser recompilado | `clang --version` |
 | **node-gyp / CMake** | build de módulo nativo Node | `.node` não se recompila sem isso | `node-gyp --version` |
 | **apksigner + keystore** | assina APK | APK sem assinatura não instala | `apksigner --version` |
@@ -126,7 +129,7 @@
 | Ferramenta | Para que serve | Por que é obrigatória | Verificar com |
 |---|---|---|---|
 | **Python 3.11+** | roda todo o arsenal scriptável | é o cola: connecta as ferramentas | `python --version` |
-| **Node.js LTS + npm** | roda o lado JS/Electron | sem o runtime do alvo, não se reempacota | `node --version` |
+| **Node.js LTS + npm** | roda o lado JS/Electron | sem o runtime do alvo o app não roda a partir do código | `node --version` |
 | **Git** | versiona cada fase | voltar atrás é requisito, não luxo | `git --version` |
 | **WSL2** | roda o arsenal Linux (GDB, ferramentas ELF) | Triton e parte do arsenal não têm wheel no Windows | `wsl --status` |
 | **7-Zip** | abre qualquer contêiner | ver item 2 | `7z i` |

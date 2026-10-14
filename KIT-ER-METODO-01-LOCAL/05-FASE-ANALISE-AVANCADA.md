@@ -45,7 +45,7 @@ TÉCNICAS (aplique até a lacuna sumir — não marque lacuna antes de esgotar)
 
 3. CHECKSUM / ANTI-TAMPER — se o binário verifica a própria integridade:
    Encontre a rotina (CRC32/Adler32/soma de bytes), RECONSTRUA o algoritmo e gere o
-   valor correto para o clone reempacotado não se auto-invalidar (senão ele crasha
+   valor correto para o clone rodando a partir do código não se auto-invalidar (senão ele crasha
    como "tamper detected").
 
 4. ANTI-DEBUG — se há detecção (IsDebuggerPresent, NtQueryInformationProcess, rdtsc

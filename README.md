@@ -15,7 +15,7 @@ CAMINHO_LOCAL ........ onde ele está na sua máquina
 quando estiver 100% certo.
 
 O método é longo e agente novo costuma morrer no meio pedindo permissão. Por isso o repositório
-traz duas peças a mais: `EXECUTAR-TUDO.md` (a mensagem que faz o agente rodar as 13 fases sem
+traz duas peças a mais: `EXECUTAR-TUDO.md` (a mensagem que faz o agente rodar as 12 fases sem
 parar) e `SEM-TRAVA/` (o gate que tira a hesitação do agente antes do método começar).
 
 ---
@@ -30,7 +30,7 @@ servidor.
 **O que ele faz na prática.** Você aponta o app e a pasta. O agente classifica o alvo, copia para
 uma pasta de trabalho (o original fica intocado, com sha256 registrado), instala o arsenal e prova
 vida em cada ferramenta, reconhece a arquitetura, limpa a identidade do original, desempacota o
-código, decompila, cataloga os achados com prova, reconstrói o clone, reempacota e valida a
+código, decompila, cataloga os achados com prova, reconstrói o clone e valida a
 paridade medindo tela por tela. Cada fase entrega artefato no disco, não resumo de conversa.
 
 **O que sai no final.** Clone rodando com identidade nova, relatório com números medidos, tabela de
@@ -69,7 +69,7 @@ original saiu limpa. O caminho inteiro está nas fases do kit.
 | `PADRAO-KIT-ER.md` | O padrão que os dois kits seguem | entender a anatomia da fase |
 | `VALIDAR-KIT.py` | Portão que mede o kit item por item | `100%` ou a lista do que falta |
 | `.claude/skills/` | Os dois métodos em formato de skill (Claude Code e afins) | instalação sem copiar e colar |
-| `EXECUTAR-TUDO.md` | A mensagem que manda o agente rodar as 13 fases sem parar | execução de ponta a ponta |
+| `EXECUTAR-TUDO.md` | A mensagem que manda o agente rodar as 12 fases sem parar | execução de ponta a ponta |
 | `SEM-TRAVA/` | O gate que tira a hesitação do agente, mais o medidor de modelo | agente que não para na fase 3 |
 | `.claude/commands/er-black.md` | Comando `/er-black` para Claude Code | um comando roda tudo |
 
@@ -104,7 +104,7 @@ As duas skills (`er-black-metodo-01-local` e `er-black-metodo-02-saas`) carregam
 
 ---
 
-## O agente executa as 13 fases sem parar
+## O agente executa as 12 fases sem parar
 
 Método longo mais agente novo é igual a agente pedindo permissão na fase 3. As três peças que
 resolvem já estão no repositório:

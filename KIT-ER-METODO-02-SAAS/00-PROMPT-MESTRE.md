@@ -36,7 +36,7 @@ NÃO perca tempo tentando "recuperar o servidor" — ele não está no artefato.
 ─────────────────────────────────────────────────────────────
 PROTOCOLO (6 FASES em ordem estrita)
 ─────────────────────────────────────────────────────────────
-  FASE 1 · CLONAR O CORPO      → extrair/rebrand/reempacotar o cliente (reusa Método 01)
+  FASE 1 · CLONAR O CORPO      → extrair, rebrand e rodar o cliente (reusa Método 01)
   FASE 2 · EXTRAIR O CONTRATO  → mapear todos os endpoints + shapes + prompts de sistema
   FASE 3 · CLASSIFICAR         → separar NÚCLEO (reconstruir real) vs PERFUMARIA (stub)
   FASE 4 · RECONSTRUIR CÉREBRO → implementar o núcleo com lógica REAL (não stub)

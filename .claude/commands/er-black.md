@@ -24,7 +24,7 @@ Ordem obrigatória:
 7. Ferramenta que falha é conserto: registre o erro real, resolva ou declare a lacuna com
    o que você tentou. Depois siga.
 8. Achado sem prova não entra na entrega.
-9. No fim, rode o portão de entrega do kit (`08-FASE-VALIDAR.md` e `09-CHECKLIST-FINAL.md`)
+9. No fim, rode o portão de entrega do kit (`07-FASE-VALIDAR.md` e `08-CHECKLIST-FINAL.md`)
    e entregue a DECLARAÇÃO DE ENTREGA com números medidos, mais o comando para abrir o
    resultado.
 
