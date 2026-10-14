@@ -17,6 +17,18 @@ Você não precisa entender de ferramenta nenhuma. A IA instala o que precisa e 
 
 ---
 
+## Os dois prompts (por onde começar)
+
+O repositório traz dois prompts numerados, feitos para colar um depois do outro:
+
+| # | Arquivo | O que faz |
+|---|---|---|
+| 01 | `PROMPT-01-INSTALAR.md` | baixa o repositório, instala o arsenal e prova cada ferramenta |
+| 02 | `PROMPT-02-EXECUTAR.md` | roda o método inteiro sozinho, do reconhecimento ao clone validado |
+
+Cole o 01, espere o arsenal ficar provado, e cole o 02 com o nome do app e a pasta. Os caminhos
+abaixo fazem o mesmo por outros atalhos.
+
 ## Caminho 1 · Qualquer IA com shell (jeito mais rápido)
 
 Serve para Claude, ChatGPT, DeepSeek, Qwen, Codex e qualquer IA capaz de rodar comando

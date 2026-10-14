@@ -18,6 +18,10 @@ O método é longo e agente novo costuma morrer no meio pedindo permissão. Por 
 traz duas peças a mais: `EXECUTAR-TUDO.md` (a mensagem que faz o agente rodar as 12 fases sem
 parar) e `SEM-TRAVA/` (o gate que tira a hesitação do agente antes do método começar).
 
+**Comece pelos dois prompts numerados:** `PROMPT-01-INSTALAR.md` (baixa o repositório, instala o
+arsenal e prova cada ferramenta) e `PROMPT-02-EXECUTAR.md` (roda o método inteiro sozinho, com os
+dois dados preenchidos).
+
 ---
 
 ## Descrição completa
@@ -61,6 +65,8 @@ original saiu limpa. O caminho inteiro está nas fases do kit.
 
 | Caminho | O que é | Resultado |
 |---|---|---|
+| `PROMPT-01-INSTALAR.md` | O primeiro prompt: instala o repositório e as ferramentas | máquina armada, arsenal provado |
+| `PROMPT-02-EXECUTAR.md` | O segundo prompt: roda o método sozinho, do começo ao fim | clone rodando, portão fechado |
 | `KIT-ER-METODO-01-LOCAL/` | Reconstrução de app **100% local** (exe, dll, asar, apk, jar, .NET). Cérebro mora no binário | clone rodando, sem identidade do original |
 | `KIT-ER-METODO-02-SAAS/` | Reconstrução de **SaaS thin-client** (Telas + API por baixo) | corpo, contrato e cérebro mapeados, cliente funcionando |
 | `MÉTODO-1-ER-CATEGORIA-A-B.md` | O método por trás do Kit 01 | leitura de estudo |

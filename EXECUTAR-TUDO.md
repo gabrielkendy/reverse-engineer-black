@@ -1,5 +1,7 @@
 # EXECUTAR TUDO · o prompt que faz o agente rodar as 12 fases sem parar
 
+> Versão numerada: `PROMPT-02-EXECUTAR.md`. É o mesmo bloco, com os três valores na mão.
+
 Método longo, agente novo: ele para no meio. Esta é a mensagem que resolve.
 
 Cole o bloco abaixo como **primeira mensagem** do seu agente, trocando só os dois valores
