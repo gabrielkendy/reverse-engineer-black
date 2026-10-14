@@ -13,3 +13,7 @@ venv/
 # sistema
 .DS_Store
 Thumbs.db
+
+# registro local (nao sobe)
+_FORA-DO-METODO-*/
+_BACKUP-*/
